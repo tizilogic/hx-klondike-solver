@@ -1,0 +1,12 @@
+{
+	"name": "solver",
+	"url" : "https://github.com/tizilogic/hx-klondike-solver",
+	"license": "zlib",
+	"tags": ["cross", "game"],
+	"description": "Klondike/Patience/Solitaire Solver",
+	"version": "0.0.1",
+	"releasenote": "Initial release.",
+	"contributors": ["tcdude"],
+	"dependencies": {},
+	"classPath": "Sources"
+}
