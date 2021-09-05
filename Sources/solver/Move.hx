@@ -7,7 +7,7 @@ class MoveNode {
 	public var value:Move;
 
     public function new(move:Move, ?parent:MoveNode = null) {
-        this.value = move;
+        this.value = move.copy();
         this.parent = parent;
     }
 }
@@ -30,5 +30,9 @@ class Move {
         this.to = moveArgs.to;
         this.count = moveArgs.count;
         this.extra = moveArgs.extra;
+    }
+
+    public inline function copy():Move {
+        return new Move({from:from, to:to, count:count, extra:extra});
     }
 }

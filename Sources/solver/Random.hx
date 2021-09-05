@@ -8,7 +8,7 @@ class Random {
 	var seed:Int;
 
 	inline function calculateNext() {
-        int y = value ^ twist - mix ^ value;
+        var y:Int = value ^ twist - mix ^ value;
         y ^= twist ^ value ^ mix;
         mix ^= twist ^ value;
         value ^= twist - mix;
@@ -45,7 +45,7 @@ class Random {
 
     public function next2():Int {
         if (seed == 0) { seed = 0x12345987; }
-        var k:Int = seed / 127773;
+        var k:Int = Std.int(seed / 127773);
         seed = 16807 * (seed - k * 127773) - 2836 * k;
         if (seed < 0) { seed += 2147483647; }
         return seed & 0x7fffffff;
